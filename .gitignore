@@ -1,0 +1,9 @@
+# Závislosti
+node_modules/
+
+# Systémové soubory
+.DS_Store
+Thumbs.db
+
+# Lokální skripty a pomocníci
+ask-gemini.js
