@@ -15,13 +15,14 @@
     <meta property="og:url" content="https://woodcore.cz/">
     <meta property="og:title" content="WOOD CORE | Sensory play pomůcky a designový nábytek">
     <meta property="og:description" content="Ručně vyráběné sensory play pomůcky a designový nábytek z poctivého dřeva. Objevte svět WOOD CORE.">
-    <meta property="og:image" content="https://woodcore.cz/img/logo.svg">
+    <meta property="og:image" content="img/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://woodcore.cz/">
     <meta property="twitter:title" content="WOOD CORE | Sensory play pomůcky a designový nábytek">
     <meta property="twitter:description" content="Ručně vyráběné sensory play pomůcky a designový nábytek z poctivého dřeva.">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,8 +52,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const storedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (storedTheme === 'dark' || (storedTheme === null && prefersDark)) {
+            if (storedTheme === 'dark') {
                 document.documentElement.classList.add('dark');
             }
         });
@@ -72,12 +72,12 @@
     <!-- Navigace -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
-            <div class="flex items-center gap-2">
+            <a href="#domu" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <img src="img/logo.svg" alt="Logo" class="h-8 w-auto dark:invert transition-all">
                 <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">WOOD CORE</span>
-            </div>
+            </a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-700 dark:text-gray-300">
-                <a href="#hero" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Domů</a>
+                <a href="#domu" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Domů</a>
                 <a href="#o-mne" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">O mně</a>
                 <a href="#galerie" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Galerie</a>
                 <a href="#kontakt" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Kontakt</a>
@@ -96,7 +96,7 @@
         </div>
         <!-- Mobilní Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 px-4 py-4 space-y-4">
-            <a href="#hero" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-600">Domů</a>
+            <a href="#domu" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-600">Domů</a>
             <a href="#o-mne" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-600">O mně</a>
             <a href="#galerie" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-600">Galerie</a>
             <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-gray-700 dark:text-gray-300 hover:text-indigo-600">Kontakt</a>
@@ -104,12 +104,12 @@
     </nav>
 
     <!-- Hero Sekce -->
-    <section id="hero" class="min-h-screen flex items-center justify-center p-4 pt-20 sm:p-6 lg:p-8
+    <section id="domu" class="min-h-screen flex items-center justify-center p-4 pt-32 sm:p-6 lg:p-8
                     bg-gradient-to-br from-indigo-100 to-purple-100
                     dark:from-gray-900 dark:to-black
                     transition-colors duration-500 ease-in-out">
         <div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <img src="img/logo.svg" alt="WOOD CORE Logo" class="w-auto h-64 sm:h-[512px] md:h-[640px] lg:h-[768px] mb-8
+            <img src="img/logo.svg" alt="WOOD CORE Logo" class="w-auto h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] mb-8
                 drop-shadow-lg dark:invert dark:saturate-200 dark:hue-rotate-180
                 transition-all duration-500 ease-in-out" loading="eager">
            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl
@@ -129,6 +129,7 @@
     <section id="o-mne" class="py-24 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl sm:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-900 dark:text-white">
+                Příběh a zrození<br>WOOD CORE
             </h2>
             <div class="space-y-10 text-lg leading-relaxed text-gray-800 dark:text-gray-200">
                 <p>Jmenuji se Jakub Poliak a už od malička mě lákala práce se dřevem. Moje cesta sice původně vedla přes IT a strojařinu, ale kutění po večerech pro mou ženu a děti mě nakonec vrátilo zpět ke dřevu. Zjistil jsem, že vytvořit něco vlastníma rukama je zkrátka vášeň. Po desítkách hodin strávených v dílně a hromadě pilin tak konečně pouštím do světa svůj nový projekt – <b>WOOD CORE</b>! Rozhodl jsem se spojit lásku k poctivému řemeslu a dřevu, a pod touto značkou vyrábět nejen designový nábytek, ale také pomůcky pro smyslové hraní (sensory play) a Montessori aktivity pro děti.</p>
